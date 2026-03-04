@@ -1,87 +1,72 @@
-# Prosjektstyringsplan
+# PROSJEKTSTYRINGSPLAN – FASE 2
+**LOG650 – Forskningsprosjekt: Logistikk og kunstig intelligens**
 
-**Prosjekt:** Ruteplanlegging av fortransport hos Lerøy
-**Emne:** LOG650 – Forskningsprosjekt i Logistikk og Kunstig Intelligens
+**Prosjekttittel:** Ruteplanlegging av fortransport hos Lerøy
 **Prosjektperiode:** Februar–Juni 2026
 **Prosjektgruppe:** 4 studenter (Hanne Haugvaldstad, Mira Wiem, Marte Dolva, Kenneth Sandvik)
 
 ---
 
-## Sammendrag
-Dette dokumentet etablerer prosjektets styringsbaseline for omfang, fremdrift, ressurser, risiko og kvalitet. Prosjektet utvikler en kvantitativ ruteoptimaliseringsmodell for fortransport av slakteklar fisk. Problemet modelleres som et Vehicle Routing Problem (VRP), et klassisk kombinatorisk optimaliseringsproblem innen transportlogistikk. Formålet er å analysere hvordan beslutningsvariabler knyttet til rutestruktur påvirker totale transportkostnader.
+## 1. Sammendrag
+Prosjektet etablerer en kvantitativ ruteoptimaliseringsmodell for fortransport av slakteklar fisk. Modellen struktureres som et Vehicle Routing Problem (VRP) og analyserer kostnadsminimering under kapasitetsbegrensninger. Prosjektet kombinerer operasjonsanalyse og KI-støttet utviklingsmetodikk. Studien undersøker hvordan optimaliserte ruter påvirker transportkostnader sammenlignet med en referanseløsning.
 
-## Behov
-Fortransport av slakteklar fisk representerer en sentral kostnadsdriver i havbruksnæringen. Det foreligger et behov for analytiske beslutningsverktøy som kan strukturere rutevalg og minimere transportkostnader under gitte kapasitets- og strukturbegrensninger.
+## 2. Forskningsdesign og metodisk forankring
+Studien gjennomføres som et kvantitativt modellbasert forskningsprosjekt. Forskningsdesignet er eksplorativt og analytisk, hvor en syntetisk, men realistisk datastruktur benyttes for å teste optimaliseringsalgoritmens ytelse. Metodisk forankres studien i operasjonsanalyse og heuristisk optimalisering.
 
-## Roller
-- **Sponsor:** Faglærer for LOG650 fungerer som prosjektsponsor og godkjenner milepæler og leveranser.
-- **Kunde:** Prosjektets primære kunde er emnet LOG650. Lerøy benyttes som casegrunnlag basert på syntetisk, realistisk datastruktur.
+## 3. Suksesskriterier (SMART)
+*   **Spesifikt:** Utvikle VRP-modell for 7 lokaliteter og 1 slakteri.
+*   **Målbart:** Dokumentere kostnadsreduksjon sammenlignet med baseline.
+*   **Oppnåelig:** Implementeres i Python innen semesterets rammer.
+*   **Relevant:** Bidrar til logistikkoptimalisering i havbruk.
+*   **Tidsavgrenset:** Fullføres innen 1. juni 2026.
 
-## Forretningscase
-Prosjektets verdi ligger i metodisk innsikt og demonstrasjon av hvordan kvantitative optimaliseringsmodeller kan anvendes som beslutningsstøtte innen logistikk.
+## 4. Arbeidsnedbrytningsstruktur (WBS)
+1.  Initiering og proposal
+2.  Datamodellering og parametere
+3.  Avstandsmatrise
+4.  Implementering av heuristisk algoritme
+5.  Scenarioanalyse
+6.  Resultatanalyse
+7.  Rapportskriving
+8.  Kvalitetssikring og peer-review
+9.  Presentasjon
 
-### Alternativer
-1) Status quo uten modell, 2) Enkel heuristisk VRP-modell (valgt), 3) Kompleks eksakt optimalisering (forkastet grunnet omfang og tidsramme).
+## 5. Kritisk linje-analyse
+Kritisk linje består av følgende sekvens: Datamodellering → Implementering → Scenarioanalyse → Resultatanalyse → Rapportskriving. Forsinkelser i disse aktivitetene vil direkte påvirke prosjektets sluttdato.
 
-## Forutsetninger
-Syntetiske data benyttes. Transportkostnad per km og kjøretøykapasitet antas konstante gjennom analyseperioden.
-
-## Gevinster
-Forventet gevinst er dokumentert kostnadsreduksjon sammenlignet med referanseløsning (baseline).
-
-## Kostnader
-Prosjektet har ingen direkte monetær kostnad, men krever tidsressurser tilsvarende 15 studiepoeng per student.
-
-## Analyse
-Kost-nytte vurderes gjennom kvantitativ sammenligning av baseline og optimalisert løsning.
-
----
-
-## Omfang
-Transportnettverket består av syv oppdrettslokaliteter og ett slakteri. Scenarioanalyse inkluderer volumøkning på 20 % og kostnadsendring på ±20 %. Multimodal transport og flere slakterier er eksplisitt ekskludert.
-
-## Mål
-Utvikle og analysere en VRP-modell som minimerer total transportkostnad innen gitte begrensninger.
-
-## Krav
-- Alle lokaliteter skal besøkes én gang
-- Ruten skal starte og avsluttes ved slakteriet
-- Kapasitetsbegrensning skal overholdes
-- Resultater skal være reproduserbare
-
-## Løsning
-Modellen implementeres i Python. Målfunksjonen kan uttrykkes som: Minimere Z = Σ (d_ij × c × x_ij), der d_ij er avstand, c er kostnad per km, og x_ij er beslutningsvariabel som indikerer om ruten går fra i til j.
-
-## Metodisk konsistens
-- Forskningsspørsmål 1 besvares gjennom modellformulering av VRP.
-- Forskningsspørsmål 2 besvares gjennom kostnadssammenligning mellom baseline og optimalisert løsning.
-- Forskningsspørsmål 3 besvares gjennom sensitivitet- og scenarioanalyse.
-
-## Omfangsverifikasjon
-Leveranser verifiseres gjennom intern peer-review, test av kode og dokumentert reproduserbarhet.
-
----
-
-## Fremdrift
-Prosjektet gjennomføres i henhold til emnets fire faser. Kritisk linje består av:
-Datamodellering → Implementering → Scenarioanalyse → Rapport.
-
-### Milepæler
+## 6. Milepæler
 | Milepæl | Dato |
 | :--- | :--- |
-| Proposal godkjent | 2026-02-15 |
-| Prosjektplan godkjent | 2026-03-01 |
-| Modell ferdig | 2026-04-01 |
-| Hovedutkast | 2026-05-01 |
+| Godkjent proposal | 2026-02-15 |
+| Godkjent prosjektplan | 2026-03-01 |
+| Ferdig modell | 2026-04-01 |
+| Scenarioanalyse ferdig | 2026-04-20 |
+| Hovedutkast levert | 2026-05-01 |
 | Endelig levering | 2026-06-01 |
 
----
+## 7. Risikoanalyse (kvantitativ)
+| Risiko | Sannsynlighet | Konsekvens | Risikoscore |
+| :--- | :---: | :---: | :---: |
+| Begrenset Python-kompetanse | 3 | 4 | 12 |
+| Tidsmangel | 4 | 5 | 20 |
+| Modellforenkling | 2 | 3 | 6 |
+| Datavaliditet | 3 | 3 | 9 |
 
-## Risiko
-Hovedrisikoer inkluderer tidsbegrensning, begrenset Python-erfaring og modellforenkling. Risiko håndteres gjennom iterativ utvikling og tydelig avgrensning.
+*(Risikoscore = Sannsynlighet × Konsekvens)*
 
-## Bruk av kunstig intelligens
-Kunstig intelligens benyttes som støtteverktøy i kodeutvikling, datastrukturering og kvalitetssikring. Alle faglige vurderinger, modellvalg og resultattolkninger er utført av prosjektgruppen.
+## 8. Kvalitet og vurderingskriterier
+For å møte vurderingskriteriene i LOG650 vektlegges: (1) tydelig avgrensning, (2) metodisk konsistens mellom forskningsspørsmål og modell, (3) reproduserbarhet, (4) analytisk dybde i scenarioanalyse, (5) korrekt og konsistent bruk av APA 7.
 
-## Kvalitet
-Kvalitet sikres gjennom reproduserbar kode, dokumenterte metodevalg, intern fagfellevurdering og konsekvent bruk av APA 7-referansestandard.
+| Krav-ID | Beskrivelse |
+| :--- | :--- |
+| KR1 | Alle oppdrettslokaliteter skal besøkes én gang i ruten |
+| KR2 | Transporten skal starte og avsluttes ved slakteriet |
+| KR3 | Kjøretøyets kapasitetsbegrensning skal ikke overskrides |
+| KR4 | Modellen skal kunne beregne totale transportkostnader |
+| KR5 | Resultatene skal være reproduserbare ved bruk av samme datasett |
+
+## Referanser
+*   Laporte, G. (2009). Fifty years of vehicle routing. *Transportation Science*, 43(4), 408–416.
+*   Toth, P., & Vigo, D. (2014). *Vehicle routing: Problems, methods, and applications*. SIAM.
+*   Russell, S., & Norvig, P. (2021). *Artificial intelligence: A modern approach* (4th ed.). Pearson.
+*   Christopher, M. (2016). *Logistics and supply chain management* (5th ed.). Pearson.
